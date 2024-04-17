@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var vIdade = [];
+        var vSexo = [];
+        var vOpiniao = [];
+        var vMaior = 0;
+        var vMenor = 200;
+        var vSoma = 0;
+        var vMedia = 0;
+        var vPessimo = 0;
+        var vOtimo = 0;
+        var vBom = 0;
+        var vHomem = 0;
+        var vMulher = 0;
+
+        var vPart =  parseInt(prompt("Informe o número de pessoas que responderam a pesquisa: "));
+        
+        for(i=1;i<=vPart;i++){     
+            vIdade[i] = parseInt(prompt("Digite sua idade: "));
+            vSoma += parseInt(vIdade[i]);
+
+            vSexo[i] = prompt("Informe seu sexo: (M/F)");
+
+            if (vSexo[i] == 'F' || vSexo[i] == 'f' || vSexo[i] == 'Feminino' || vSexo[i] == 'feminino' || vSexo[i] == 'Mulher' || vSexo[i] == 'mulher') {
+                vMulher++;
+            }
+            if (vSexo[i] == 'M' || vSexo[i] == 'm' || vSexo[i] == 'Masculino' || vSexo[i] == 'masculino'|| vSexo[i] == 'Homem' || vSexo[i] == 'homem') {
+                vHomem++;
+            }
+
+            vOpiniao[i] = parseInt(prompt("Informe sua opinião onde: \nÓtimo = 4 \nBom = 3 \nRegular = 2 \nPessímo = 1"));
+
+            if (parseInt(vIdade[i]) < vMenor) {
+                vMenor = parseInt(vIdade[i]);
+            }
+            if ( parseInt(vIdade[i]) > vMaior ) {
+                vMaior = parseInt(vIdade[i]);
+            }
+            if ( vOpiniao[i] == 1 ) {
+                vPessimo++;
+            }
+            if ( vOpiniao[i] == 3 ) {
+                vBom++;
+            }
+            if ( vOpiniao[i] == 4 ) {
+                vOtimo++;
+            }
+        }
+        vMedia = vSoma/vPart;
+
+        var vPorce = ((vOtimo + vBom) / vPart) * 100;
+
+        alert("A média das idades é: " + vMedia +
+              "\nA maior idade foi: " + vMaior +
+              "\nA menor idade foi: " + vMenor +
+              "\nA Quantidade de pessoas que responderam 'Pessímo': " + vPessimo +
+              "\nA Porcentagem das pessoas que responderam 'Ótimo' e 'Bom': " + vPorce.toFixed(2) + "%" +
+              "\nA Quantidade de homems que responderam o questionário: " + vHomem +
+              "\nA Quantidade de mulheres que responderam o questionário: " + vMulher);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
