@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vAltura = 0;
+        var vPeso = 0;
+        var vImc = 0;
+
+        vAltura = parseFloat(prompt("Informe sua altura por favor: (exemplo: 1.79) "));
+        vPeso = parseFloat(prompt("Informe seu peso por favor: (exemplo: 85.3) "));
+
+        vImc = vPeso / (Math.pow(vAltura, 2));
+        vImc = vImc.toFixed(2);
+
+        switch (true)
+        {
+            case vAltura > 3.00:
+                alert("Digite uma altura válida!");
+                break;
+            case vPeso > 600.00:
+                alert("Digite um peso válido!");
+                break;
+            case vImc < 18.5:
+                alert("Seu IMC é: " + vImc + "\nA sua Classificação é: Magreza \n Grau de obesidade: 0")
+                break;
+            case vImc >= 18.5 && vImc <= 24.9:
+                alert("Seu IMC é: " + vImc + "\nA sua Classificação é: Normal \n Grau de obesidade: 0")
+                break;
+            case vImc >= 25.0 && vImc <= 29.9 :
+                alert("Seu IMC é: " + vImc + "\nA sua Classificação é: Sobrepeso \n Grau de obesidade: 1")
+                break;
+            case vImc >= 30.0 && vImc <= 39.9 :
+                alert("Seu IMC é: " + vImc + "\nA sua Classificação é: Obesidade \n Grau de obesidade: 2")
+                break;
+            case vImc > 40:
+                alert("Seu IMC é: " + vImc + "\nA sua Classificação é: Obesidade Grave \n Grau de obesidade: 3")
+                break; 
+            default: 
+                alert("Digite números válidos!");
+                break;  
+        }    
+    </script>
+</body>
+</html>
