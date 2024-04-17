@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var vNum1 = 0;
+        var vNum2 = 0;
+        var vNum3 = 0;
+
+        vNum1 = parseInt(prompt("Digite o valor para A: "));
+        vNum2 = parseInt(prompt("Digite o valor para B: "));
+        vNum3 = parseInt(prompt("Digite o valor para C: "));
+
+        if (isNaN(vNum1) || isNaN(vNum2 || isNaN(vNum3))){
+            alert("Letras não são aceitas! digite um número!");
+        }
+        else
+        {
+            if(Math.abs(vNum2-vNum3) < vNum1 < vNum2 + vNum3 && Math.abs(vNum1-vNum3) < vNum2 < vNum1 + vNum3 && Math.abs(vNum1-vNum2) < vNum3 < vNum1 + vNum2){
+                if(vNum1 == vNum2 && vNum1 == vNum3){
+                    alert("O triângulo é Equilátero!")
+                }
+                else if(vNum1 == vNum2 || vNum2 == vNum3 || vNum1 == vNum3){
+                    alert("O triângulo é Isósceles!")
+                }
+                else{
+                    alert("O triângulo é Escaleno!")
+                }
+            }
+            else{
+                alert("Esses valores não podem pertençer aos lados de um triângulo!");
+            }
+        }
+    </script>
+</body>
+</html>
