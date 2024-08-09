@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 11</title>
+    <script src="Atividade_11.js"></script>
+</head>
+<body>
+    <script>
+        var vNum1 = 0;
+        var vNum2 = 0;
+        var vNum3 = 0;
+
+        vNum1 = parseInt(prompt("Digite o valor para o primeiro número: "));
+        vNum2 = parseInt(prompt("Digite o valor para o segundo número: "));
+        vNum3 = parseInt(prompt("Digite o valor para o terceiro número: "));
+
+        if (isNaN(vNum1) || isNaN(vNum2) || isNaN(vNum3)){
+            alert("Letras não são aceitas! digite um número!");
+        }
+        else{
+            alert("Os números inseridos organizados em ordem crescente ficam dessa maneira: \n" + ordenarNumerosCrescente(vNum1, vNum2, vNum3));
+        }
+    </script>
+</body>
+</html>
