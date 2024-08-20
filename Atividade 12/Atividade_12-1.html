@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 12</title>
+    <script src="JavaScript-1.js"></script>
+</head>
+<body>
+    <script>
+        var elemento = 0;
+        var numeros = [];
+
+        for(i=0; i<=2; i++){
+            var elemento = parseInt(prompt("Digite o valor para inserir no array: ")); 
+
+            numeros.push(elemento);
+        }
+
+        alert("O valor dos números na array são: " + numeros)
+        alert("A soma dos três números é: "+ SomaArray(numeros) +".\nO quadrado do primeiro número é: "+ QuadradodoPrimeiro(numeros) +".\nO quadrado do segundo número é: "+ QuadradodoSegundo(numeros) +".");
+    </script>
+</body>
+</html>
