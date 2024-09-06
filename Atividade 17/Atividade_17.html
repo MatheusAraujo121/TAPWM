@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 17</title>
+</head>
+<body>
+    <input type="text" placeholder="Digite alguma coisa!" id="vTexto" name="vTexto" onkeydown="return /[a-zA-Z]/i.test(event.key)" title="Digite algo..."><br>
+
+    <input type="checkbox" id="vOpcMaiusculo" name="vOpcMaiusculo" value="Maiúsculo">
+    <label for="vOpcMaiusculo"> Maiúsculo </label><br>
+
+    <input type="checkbox" id="vOpcMinusculo" name="vOpcMinusculo" value="Minúsculo">
+    <label for="vOpcMinusculo"> Minúsculo </label><br>
+
+    <script>
+        const checkBoxMaiusculo = document.getElementById("vOpcMaiusculo");
+        const checkBoxMinusculo = document.getElementById("vOpcMinusculo");
+        const caixatxt = document.getElementById("vTexto");
+            
+        function AtualizarTextoCaixa(){
+
+            let text = caixatxt.value;
+                    
+            if(checkBoxMaiusculo.checked){
+
+                text = text.toUpperCase();
+
+            } else if(checkBoxMinusculo.checked){
+
+                text = text.toLowerCase();
+
+            }
+
+            caixatxt.value = text;
+
+        }
+
+        checkBoxMaiusculo.addEventListener('change', AtualizarTextoCaixa);
+        checkBoxMinusculo.addEventListener('change', AtualizarTextoCaixa);
+        caixatxt.addEventListener('input', AtualizarTextoCaixa);
+
+    </script> 
+</body>
+</html>
